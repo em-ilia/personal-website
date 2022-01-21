@@ -1,0 +1,22 @@
+@keyframes gradient-bg {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+mark.rainbow, mark.internet {
+  background-image: repeating-linear-gradient(to left, red, violet, indigo, blue, green, yellow, orange, red, violet);
+  background-size: 1000% 1000%;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-bg 4s linear infinite;
+}
+
+mark.internet {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=anim.css.map */
