@@ -48,8 +48,11 @@ body
 .contentholder
   justify-content: flex-start
   div
-    width: 30em
+    width: 30rem
     margin: 1% 0
+
+    @include mobile
+      width: 20rem
 
   .contentholder__topfiller
     height: 5%
