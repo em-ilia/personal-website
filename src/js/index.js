@@ -4,7 +4,7 @@ const is_mobile = getComputedStyle(document.body).getPropertyValue('--is-mobile'
 const pgp_p = document.getElementById('pgp_p')
 const pgp_a = document.getElementById('pgp_a')
 
-if (is_mobile) {
+if (is_mobile === '1') {
 	pgp_a.style.display = "block";
 } else {
 		pgp_p.onmouseover = function() {pgp_a.style.display = "inline";}
