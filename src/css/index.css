@@ -10,6 +10,9 @@ body {
   margin: 0 0 0 0;
   overflow: hidden;
   background-color: black;
+  --test: 13;
+  --is-mobile: 0;
+  --is-mobile: 1;
 }
 
 .overlay {
@@ -31,6 +34,7 @@ body {
   height: 100vh;
   background-color: #091519;
   flex-direction: column;
+  width: 100%;
 }
 
 .contentholder {
@@ -112,6 +116,7 @@ mark.internet {
 
 .name__subcontent {
   text-align: left;
+  text-align: center;
 }
 .name__subcontent a {
   font-size: small;
@@ -119,6 +124,7 @@ mark.internet {
   position: absolute;
   margin-left: 5px;
   margin-top: 5px;
+  position: relative;
 }
 
 .links {
@@ -130,6 +136,7 @@ mark.internet {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80%;
 }
 .links .links__sub {
   height: 6vh;

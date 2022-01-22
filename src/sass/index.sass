@@ -9,12 +9,18 @@
 .name__subcontent
   text-align: left
 
+  @include mobile
+    text-align: center
+
   a
     font-size: small
     display: none
     position: absolute
     margin-left: 5px
     margin-top: 5px
+
+    @include mobile
+      position: relative
 
 
 .links
@@ -28,6 +34,9 @@
   display: flex
   justify-content: center
   align-items: center
+
+  @include mobile
+    width: 80%
 
   .links__sub
     height: 6vh

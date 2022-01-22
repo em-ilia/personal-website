@@ -1,7 +1,15 @@
+// If CSS determines that the device is mobile, set flag
+const is_mobile = getComputedStyle(document.body).getPropertyValue('--is-mobile');
+
 const pgp_p = document.getElementById('pgp_p')
 const pgp_a = document.getElementById('pgp_a')
-pgp_p.onmouseover = function() {pgp_a.style.display = "inline";}
-pgp_p.onmouseout = function() {pgp_a.style.display = "none";}
+
+if (is_mobile) {
+	pgp_a.style.display = "block";
+} else {
+		pgp_p.onmouseover = function() {pgp_a.style.display = "inline";}
+		pgp_p.onmouseout = function() {pgp_a.style.display = "none";}
+	}
 
 const moon = document.getElementById('moonlink');
 console.log(moon);

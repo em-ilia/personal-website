@@ -1,3 +1,5 @@
+@import 'responsive'
+
 $primary-color: #F5A9B8
 $secondary-color: #FFFFFF
 $outer-bg: #091519
@@ -19,6 +21,11 @@ body
   overflow: hidden
   background-color: black
 
+  --test: 13
+  --is-mobile: 0
+  @include mobile()
+    --is-mobile: 1
+
 .overlay
   width: 100%
   height: 100vh
@@ -35,6 +42,9 @@ body
   height: 100vh
   background-color: $outer-bg
   flex-direction: column
+
+  @include mobile()
+    width: 100%
 
 .contentholder
   justify-content: flex-start
