@@ -10,9 +10,12 @@ body {
   margin: 0 0 0 0;
   overflow: hidden;
   background-color: black;
-  --test: 13;
   --is-mobile: 0;
-  --is-mobile: 1;
+}
+@media (pointer: coarse) {
+  body {
+    --is-mobile: 1;
+  }
 }
 
 .overlay {
@@ -34,7 +37,11 @@ body {
   height: 100vh;
   background-color: #091519;
   flex-direction: column;
-  width: 100%;
+}
+@media (pointer: coarse) {
+  .outerdiv {
+    width: 100%;
+  }
 }
 
 .contentholder {
@@ -116,7 +123,11 @@ mark.internet {
 
 .name__subcontent {
   text-align: left;
-  text-align: center;
+}
+@media (pointer: coarse) {
+  .name__subcontent {
+    text-align: center;
+  }
 }
 .name__subcontent a {
   font-size: small;
@@ -124,7 +135,11 @@ mark.internet {
   position: absolute;
   margin-left: 5px;
   margin-top: 5px;
-  position: relative;
+}
+@media (pointer: coarse) {
+  .name__subcontent a {
+    position: relative;
+  }
 }
 
 .links {
@@ -136,7 +151,11 @@ mark.internet {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+}
+@media (pointer: coarse) {
+  .links {
+    width: 80%;
+  }
 }
 .links .links__sub {
   height: 6vh;

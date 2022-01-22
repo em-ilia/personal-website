@@ -10,9 +10,12 @@ body {
   margin: 0 0 0 0;
   overflow: hidden;
   background-color: black;
-  --test: 13;
   --is-mobile: 0;
-  --is-mobile: 1;
+}
+@media (pointer: coarse) {
+  body {
+    --is-mobile: 1;
+  }
 }
 
 .overlay {
@@ -34,7 +37,11 @@ body {
   height: 100vh;
   background-color: #091519;
   flex-direction: column;
-  width: 100%;
+}
+@media (pointer: coarse) {
+  .outerdiv {
+    width: 100%;
+  }
 }
 
 .contentholder {
