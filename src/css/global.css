@@ -84,4 +84,8 @@ li:before {
   content: "- ";
 }
 
+a {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=global.css.map */
