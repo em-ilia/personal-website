@@ -1,0 +1,3 @@
+[submodule "hugo/recipe/themes/ilia-hugo-theme"]
+	path = hugo/recipe/themes/ilia-hugo-theme
+	url = git@github.com:em-ilia/ilia-hugo-theme.git

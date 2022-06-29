@@ -1,0 +1,7 @@
+baseURL = 'https://ilia.moe/cool-stuff/recipes'
+languageCode = 'en-us'
+title = 'Recipes'
+theme = 'ilia-hugo-theme'
+
+[taxonomies]
+tag = 'tags'
