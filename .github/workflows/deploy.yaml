@@ -15,6 +15,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd repo
+            git stash
             git pull --force origin master
       
   build-sass:
