@@ -1,8 +1,11 @@
 @import 'responsive'
+@import 'anim'
 
-$primary-color: #F5A9B8
-$secondary-color: #FFFFFF
+$primary-color: #f4b7c3
+$secondary-color: #f4e8b7
+$tertiary-color: #b7c3f4
 $outer-bg: #091519
+//$outer-bg: #f2e1ba // nice sand color, light theme maybe?
 $inner-bg: #112932
 
 @mixin div-center()
@@ -11,6 +14,9 @@ $inner-bg: #112932
   align-items: center
   flex-direction: column
   align-content: center
+
+*
+  border-color: $tertiary-color
 
 body
   @include div-center()
@@ -33,7 +39,7 @@ body
 
   opacity: 0.03
   z-index: 1
-  background-image: url('/img/noise.gif')
+  background-image: url('../img/noise.gif')
   background-size: 25%
 
   @include mobile()
@@ -51,6 +57,7 @@ body
 
 .contentholder
   justify-content: flex-start
+  overflow: scroll
   div
     width: 30rem
     margin: 1% 0
@@ -65,21 +72,27 @@ body
 .content
   z-index: 100
 
+.returnLink *
+  margin: 3% 0
+  font-size: large
+
 
 h1
   color: $primary-color
   font-family: serif
-  font-size: xx-large
+  font-size: xxx-large
   margin: 5px 5px
   text-align: center
 
 h2
   color: $secondary-color
   font-family: serif
-  font-size: medium
-  margin-top: -8px
+  font-size: large
   text-align: center
 
+h3
+  color: $secondary-color
+  font-size: large
 
 p
   color: $secondary-color
@@ -90,12 +103,36 @@ p
 
 ol
   margin: 0px 0px
+  list-style-type: decimal
+
+ul
+  list-style-type: none
+  li
+    &:before
+      content: "- "
 
 li
   @extend p
-  list-style-type: none
-  &:before
-    content: "- "
 
 a
   text-decoration: none
+  &:link
+    color: $secondary-color
+  &:visited
+    color: $secondary-color
+
+header
+  margin: 1% 0 1% 0
+
+  border-style: solid
+  border-width: 0px 0px 2px 0px
+
+  h2
+    margin: 0
+    margin-top: -8px
+
+article
+  margin: 3% 0
+
+  border-style: solid
+  border-width: 0px 0px 2px 0px
