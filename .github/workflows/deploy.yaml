@@ -61,7 +61,7 @@ jobs:
             sudo su
             rm -rf /usr/share/nginx/html/ilia.moe
             cp -r repo/src /usr/share/nginx/html/ilia.moe
-            cp -r repo/hugo/recipe/public /usr/share/nginx/html/ilia.moe/cool-stuff/
+            cp -r repo/hugo/recipe/public /usr/share/nginx/html/ilia.moe/cool-stuff/recipes
     
    
     
