@@ -1,3 +1,4 @@
 src/css/
 push_updates.sh
 hugo/*/public/
+hugo/*/resources/_gen/
