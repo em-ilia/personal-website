@@ -1,2 +1,3 @@
 src/css/
 push_updates.sh
+hugo/*/public/
