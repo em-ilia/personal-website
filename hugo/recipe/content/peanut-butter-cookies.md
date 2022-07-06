@@ -25,6 +25,6 @@ draft: true
 3. Add baking soda, baking powder, and eggs, then mix
 4. Add flour in 1 cup (or smaller) increments until all is added and combined
 5. Cover and let dough sit for a while (optional)
-6. Bake at 375°F for around 11–12 minutes
+6. Bake at 375&deg;F for around 11&ndash;12 minutes
 	- Time varies based on cookie size
 7. Let sit on baking sheet for a few minutes before moving to a cooling rack

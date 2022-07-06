@@ -27,5 +27,5 @@ tags: ["baked"]
 4. Slowly add flour, half a cup at a time, and mix until all is added
 5. (Optional) Refrigerate several hours or overnight, or put in freezer for 15 minutes
 6. Roll out and cut, or use scoop to place on sheet
-7. Bake at 375°F for around 12 minutes
+7. Bake at 375&deg;F for around 12 minutes
 	- Bake time will vary based on size

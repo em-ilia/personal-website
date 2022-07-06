@@ -24,7 +24,7 @@ draft: true
 ## Dough
 ### Ingredients
 - 2.5 tsp (9g) dry yeast
-- 0.5 cup (120mL) lukewarm milk (around 98°F / 37°C)
+- 0.5 cup (120mL) lukewarm milk (around 98&deg;F / 37&deg;C)
 - 3 cup (443g) flour
 - 3 tbsp (44g) granulated sugar
 - 0.75 tsp (2g) fine sea salt
@@ -33,7 +33,7 @@ draft: true
 - 3.5 tbsp (50g) unsalted butter (softened)
 
 ### Procedure
-5. Heat milk to 90–95°F
+5. Heat milk to 90&ndash;95&deg;F
 6. Add yeast to milk, stir, and let sit 10 minutes
 7. Whisk salt and sugar into flour in a mixing bowl
 8. Put bowl in stand mixer w/ dough hook jawn
@@ -41,10 +41,10 @@ draft: true
 10. Mix at low speed, scraping sides when needed
 11. Increase speed to medium when dough becomes cohesive 
 12. Gradually add butter (1 tbsp at a time)
-13. Mix until fully incorporated, then continue mixing for an additional 5–7 minutes
+13. Mix until fully incorporated, then continue mixing for an additional 5&ndash;7 minutes
 14. Place on an unflowered surfaced and slide the dough around to form a ball
 15. Put in a lightly greased bowl and cover with a damp towel
-16. Let sit at room temp 1–2 hours until doubled
+16. Let sit at room temp 1&ndash;2 hours until doubled
 
 ## Glaze
 ### Ingredients
@@ -75,4 +75,4 @@ draft: true
 26. Grease a 9x9 cake pan or a round cake pan
 26. Pour glaze into bottom of pan
 27. Arrange rolls equally spaced in pan
-28. Bake at 350°F for 30–35 minutes
+28. Bake at 350&deg;F for 30&ndash;35 minutes
