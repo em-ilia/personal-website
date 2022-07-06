@@ -1,0 +1,48 @@
+name: fastCI
+on: 
+  workflow_dispatch:
+jobs:
+  fast-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull most recent version of repo
+        uses: appleboy/ssh-action@master
+        with:
+          host: ilia.moe
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd repo
+            git stash
+            git pull --force origin master
+            git submodule update --remote
+      - name: Recompile sass for the main website
+        uses: appleboy/ssh-action@master
+        with:
+          host: ilia.moe
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd repo/src
+            sass sass/:css/
+      - name: Build hugo
+        uses: appleboy/ssh-action@master
+        with:
+          host: ilia.moe
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd repo/hugo
+            cd recipe
+            hugo -D
+      - name: Move files so NGINX can see them
+        uses: appleboy/ssh-action@master
+        with:
+          host: ilia.moe
+          username: ubuntu
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            sudo su
+            rm -rf /usr/share/nginx/html/ilia.moe
+            cp -r repo/src /usr/share/nginx/html/ilia.moe
+            cp -r repo/hugo/recipe/public /usr/share/nginx/html/ilia.moe/cool-stuff/recipes
