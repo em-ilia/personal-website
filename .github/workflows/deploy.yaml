@@ -17,6 +17,7 @@ jobs:
             cd repo
             git stash
             git pull --force origin master
+            git submodule update
       
   build-sass:
     runs-on: ubuntu-latest
