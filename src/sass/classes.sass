@@ -1,0 +1,47 @@
+@import 'responsive'
+
+.overlay
+  width: 100%
+  height: 100vh
+
+  position: fixed
+
+  //opacity: 0.03
+  opacity: 0.2
+  z-index: 1 !important
+  background-image: url('../img/noise.gif')
+  background-size: 25%
+
+  @include mobile()
+    background-size: 200%
+
+.contentholder
+  justify-content: flex-start
+  overflow: scroll
+  div
+    width: 30rem
+    margin: 1% 0
+
+    @include mobile
+      width: 20rem
+
+  .contentholder__topfiller
+    height: 5%
+    background-color: transparent
+
+/* New */
+
+.flex
+  display: flex
+  gap: 2rem
+
+.center
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  align-content: center
+
+.container
+  padding-inline: 2em
+  margin-inline: auto
+  max-width: 90rem
