@@ -1,7 +1,39 @@
 /* ----------------- */
 /* Custom Properties */
 /* ----------------- */
+/* Many of the prop-
+ * erties here are
+ * where the substa-
+ * ntive changes
+ * will be made      */
 
+:root {
+
+  /* colors */
+
+  --color-dark: 348 79% 81% ;/* White */
+  --color-light: 0 0% 50% ; /* Gray */
+  /*--color-white: 348 79% 97% ;*/
+  --color-white: var( --color-dark) / .2  ;
+  --color-accent: 45 79% 81% ;/* White */
+
+  /* font */
+
+  /* Sizes divided by 16 so values given in px */
+  --fs-900: calc(125rem / 16);
+  --fs-800: calc(75rem / 16);
+  --fs-700: calc(56rem / 16);
+  --fs-600: calc(32rem / 16);
+  --fs-500: calc(28rem / 16);
+  --fs-400: calc(24rem / 16);
+  --fs-300: calc(18rem / 16);
+  --fs-200: calc(16rem / 16);
+
+  --ff-serif: serif;
+  --ff-sans-cond: sans-serif;
+  --ff-sans: sans-serif;
+
+}
 /* ----- */
 /* Reset */
 /* ----- */
@@ -28,7 +60,7 @@ body {
   font-family: var(--ff-sans);
   font-size: var(--fs-400);
   color: hsl( var(--color-dark) );
-  background-color: hsl ( var(--color-white) );
+  background-color: hsl( var(--color-white) );
   line-height: 1.5;
   min-height: 100vh;
 }
@@ -53,40 +85,6 @@ input, button, textarea, select {
 	}
 }
 
-/* ----------------- */
-/* Custom Properties */
-/* ----------------- */
-/* Many of the prop-
- * erties here are
- * where the substa-
- * ntive changes
- * will be made      */
-
-:root {
-
-  /* colors */
-
-  --color-dark:  0 0% 0% ; /* Black */
-  --color-light: 0 0% 50% ; /* Gray */
-  --color-white: 0 0% 100% ;/* White */
-
-  /* font */
-
-  /* Sizes divided by 16 so values given in px */
-  --fs-900: calc(125rem / 16);
-  --fs-800: calc(75rem / 16);
-  --fs-700: calc(56rem / 16);
-  --fs-600: calc(32rem / 16);
-  --fs-500: calc(28rem / 16);
-  --fs-400: calc(24rem / 16);
-  --fs-300: calc(18rem / 16);
-  --fs-200: calc(16rem / 16);
-
-  --ff-serif: serif;
-  --ff-sans-cond: sans-serif;
-  --ff-sans: sans-serif;
-
-}
 
 /* --------------- */
 /* Utility Classes */
