@@ -1,66 +1,6 @@
 /* ----------------- */
 /* Custom Properties */
 /* ----------------- */
-
-/* ----- */
-/* Reset */
-/* ----- */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body, h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  font-weight: 400;
-}
-
-h1, h2, h3 {
-  line-height: 1.1;
-}
-
-body {
-  font-family: var(--ff-sans);
-  font-size: var(--fs-400);
-  color: hsl( var(--color-dark) );
-  background-color: hsl ( var(--color-white) );
-  line-height: 1.5;
-  min-height: 100vh;
-}
-
-main {
-  margin-left: 1vw;
-  margin-top: 1vh;
-}
-
-img, picture {
-  max-width: 100%;
-  display: block;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behaviour: auto !important;
-	}
-}
-
-/* ----------------- */
-/* Custom Properties */
-/* ----------------- */
 /* Many of the prop-
  * erties here are
  * where the substa-
@@ -92,6 +32,63 @@ input, button, textarea, select {
   --ff-sans: sans-serif;
 
 }
+
+/* ----- */
+/* Reset */
+/* ----- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+}
+
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  color: hsl( var(--color-dark) );
+  background-color: hsl( var(--color-white) );
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+main {
+  margin-left: 1vw;
+  margin-top: 1vh;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behaviour: auto !important;
+	}
+}
+
 
 /* --------------- */
 /* Utility Classes */
