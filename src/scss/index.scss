@@ -1,2 +1,13 @@
 @import "ilia1";
 
+footer {
+    a {
+      display: table-cell;
+      height: 6vh;
+      width: 15%;
+      margin: 3%;
+
+      font-size: 6vh;
+      text-align: center;
+    }
+}
