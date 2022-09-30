@@ -94,6 +94,14 @@ input, button, textarea, select {
 /* Utility Classes */
 /* --------------- */
 
+/* Layouts */
+
+.container {
+  padding-inline: clamp(0.5rem, 4rem, 5rem);
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
 .flex {
   display: flex;
   gap: 2rem;
@@ -124,11 +132,12 @@ input, button, textarea, select {
   justify-content: space-evenly;
 }
 
-.container {
-  padding-inline: clamp(0.5rem, 4rem, 5rem);
-  margin-inline: auto;
-  max-width: 80rem;
+.lock-bottom {
+  position: absolute;
+  bottom: 0%;
 }
+
+/* Other */
 
 .hr::after { /* Add fake hr after header */
   content: '';
