@@ -24,7 +24,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd repo/src
-            sass sass/:css/
+            sass scss/:css/
       - name: Build hugo
         uses: appleboy/ssh-action@master
         with:
