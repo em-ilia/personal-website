@@ -51,3 +51,9 @@ input, button, textarea, select {
     scroll-behaviour: auto !important;
 	}
 }
+
+@mixin mobile() {
+  @media (pointer: coarse) {
+    @content;
+  }
+  }
