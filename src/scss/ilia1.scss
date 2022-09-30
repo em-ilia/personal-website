@@ -188,3 +188,37 @@ footer {
   background-image: url('../img/noise.gif');
   background-size: 25%;
 }
+
+/* Animations */
+// GRADIENTS (you might need them!)
+$rainbow-gradient: repeating-linear-gradient(to left, red, violet, indigo, blue, green, yellow, orange, red, violet);
+
+// ANIMATIONS (love to see them)
+@keyframes gradient-bg {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
+@mixin rainbow-text() {
+  animation: gradient-bg 4s linear infinite;
+}
+
+// MARKS
+mark.rainbow {
+  background-image: $rainbow-gradient;
+  background-size: 1000% 1000%;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include rainbow-text();
+}
+
+// ALIASES
+mark.internet {
+  @extend .rainbow;
+  font-weight: bold;
+}
