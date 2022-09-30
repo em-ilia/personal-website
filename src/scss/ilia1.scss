@@ -60,6 +60,27 @@ $color-dark: hsl(195, 47%, 7%);
     place-self: center;
     grid-area: main;
   }
+
+  footer {
+    @extend .row;
+    flex-wrap: nowrap;
+
+    margin-bottom: 2vh;
+    position: static;
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+    place-self: end center;
+
+    a {
+      display: table-cell;
+      height: 6vh;
+      width: 15%;
+      margin: 3%;
+
+      font-size: 6vh;
+      text-align: center;
+    }
+  }
 }
 
 .grid-center {
@@ -168,11 +189,6 @@ a {
 }
 
 /* Semantic */
-
-footer {
-  position: fixed;
-  bottom: 0px;
-}
 
 /* ------------- */
 /* ILIA Specific */
