@@ -24,7 +24,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd repo/src
-            sass sass/:css/
+            sass scss/:css/
       - name: Build hugo
         uses: appleboy/ssh-action@master
         with:
@@ -42,7 +42,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo su
-            rm -rf /usr/share/nginx/html/ilia.moe
-            cp -r repo/src /usr/share/nginx/html/ilia.moe
-            cp -r repo/hugo/recipe/public /usr/share/nginx/html/ilia.moe/cool-stuff/recipes
+            sudo rm -rf /usr/share/nginx/html/ilia.moe
+            sudo cp -r repo/src /usr/share/nginx/html/ilia.moe
+            sudo cp -r repo/hugo/recipe/public /usr/share/nginx/html/ilia.moe/cool-stuff/recipes
+            sudo cp repo/error_pages/* /usr/share/nginx/html/resources
