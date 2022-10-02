@@ -241,7 +241,7 @@ footer {
   border: 1px solid black;
 }
 
-@keyframes theme3-gradient-anim {
+@keyframes waltuh-gradient-anim {
   from {
     background-position: 6em 0em;
   }
@@ -276,13 +276,31 @@ footer {
     background-position: 6em 0em;
   }
 }
-.theme3-gradient {
+.waltuh-gradient {
   font-weight: 600;
   color: transparent;
   background: repeating-radial-gradient(#543663, #aa00ff, #dd99ff 80%, white);
   background-size: 30vmin 30vmin;
   background-clip: text;
-  animation: theme3-gradient-anim 12s linear infinite;
+  animation: waltuh-gradient-anim 12s linear infinite;
 }
 
-/*# sourceMappingURL=theme3.css.map */
+#overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  opacity: 0.1;
+  z-index: 1;
+  background-image: url("https://ilia.moe/img/noise.gif");
+  background-size: 25%;
+}
+
+main * {
+  z-index: 2;
+}
+
+footer {
+  z-index: 2;
+}
+
+/*# sourceMappingURL=waltuh.css.map */
