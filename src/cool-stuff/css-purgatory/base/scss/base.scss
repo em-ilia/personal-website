@@ -1,11 +1,13 @@
+@use "sass:math";
+@mixin reset {
 /* ----------------- */
 /* Custom Properties */
 /* ----------------- */
-/* Many of the prop-
- * erties here are
- * where the substa-
- * ntive changes
- * will be made      */
+/*
+  This values are to be overridden
+  after being injected into
+  the global scope.
+*/
 
   /* colors */
 
@@ -16,75 +18,18 @@ $color-white: hsl(0 0% 100%);/* White */
   /* font */
 
   /* Sizes divided by 16 so values given in px */
-$fs-900: calc(125rem / 16);
-$fs-800: calc(75rem / 16);
-$fs-700: calc(56rem / 16);
-$fs-600: calc(32rem / 16);
-$fs-500: calc(28rem / 16);
-$fs-400: calc(24rem / 16);
-$fs-300: calc(18rem / 16);
-$fs-200: calc(16rem / 16);
+$fs-900: math.div(125rem, 16);
+$fs-800: math.div(75rem, 16);
+$fs-700: math.div(56rem, 16);
+$fs-600: math.div(32rem, 16);
+$fs-500: math.div(28rem, 16);
+$fs-400: math.div(24rem, 16);
+$fs-300: math.div(18rem, 16);
+$fs-200: math.div(16rem, 16);
 
 $ff-serif: serif;
 $ff-sans-cond: sans-serif;
 $ff-sans: sans-serif;
-
-/* ----- */
-/* Reset */
-/* ----- */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body, h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  font-weight: 400;
-}
-
-h1, h2, h3 {
-  line-height: 1.1;
-}
-
-body {
-  font-family: $ff-sans;
-  font-size: $fs-400;
-  color: $color-dark;
-  background-color: $color-white;
-  line-height: 1.5;
-  min-height: 100vh;
-}
-
-main {
-  margin-left: 1vw;
-  margin-top: 1vh;
-}
-
-img, picture {
-  max-width: 100%;
-  display: block;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behaviour: auto !important;
-	}
-}
-
 
 /* --------------- */
 /* Utility Classes */
@@ -188,6 +133,65 @@ section:not(:last-of-type) {
 footer {
   margin-top: 3vh;
 }
+
+/* ----- */
+/* Reset */
+/* ----- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+}
+
+body {
+  font-family: $ff-sans;
+  font-size: $fs-400;
+  color: $color-dark;
+  background-color: $color-white;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+main {
+  margin-left: 1vw;
+  margin-top: 1vh;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behaviour: auto !important;
+	}
+}
+}
+
+@include reset;
 
 /* -------------------- */
 /* Non-Reusable Classes */
