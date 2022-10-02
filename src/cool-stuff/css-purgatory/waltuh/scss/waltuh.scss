@@ -254,6 +254,10 @@ footer {
     background-position: 6em 0em;
   }
 }
+@keyframes wipeIn {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
 
 .waltuh-gradient {
   font-weight: 600;
@@ -265,7 +269,9 @@ footer {
   background-size: 30vmin 30vmin;
   background-clip: text;
 
-  animation: waltuh-gradient-anim 12s linear infinite;
+  animation: waltuh-gradient-anim 12s linear infinite,
+  wipeIn 0.25s ease-in;
+
 }
 
 @keyframes overlay-breathe {
