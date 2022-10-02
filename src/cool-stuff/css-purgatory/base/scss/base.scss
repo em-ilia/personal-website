@@ -1,5 +1,4 @@
 @use "sass:math";
-@mixin reset {
 /* ----------------- */
 /* Custom Properties */
 /* ----------------- */
@@ -31,6 +30,7 @@ $ff-serif: serif;
 $ff-sans-cond: sans-serif;
 $ff-sans: sans-serif;
 
+@mixin utility{
 /* --------------- */
 /* Utility Classes */
 /* --------------- */
@@ -133,7 +133,9 @@ section:not(:last-of-type) {
 footer {
   margin-top: 3vh;
 }
+}
 
+@mixin reset {
 /* ----- */
 /* Reset */
 /* ----- */
@@ -168,6 +170,13 @@ body {
 main {
   margin-left: 1vw;
   margin-top: 1vh;
+  * {
+    z-index: 2;
+  }
+}
+
+footer {
+  z-index: 2;
 }
 
 img, picture {
@@ -189,9 +198,8 @@ input, button, textarea, select {
     scroll-behaviour: auto !important;
 	}
 }
-}
 
-@include reset;
+}
 
 /* -------------------- */
 /* Non-Reusable Classes */
