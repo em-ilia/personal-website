@@ -223,32 +223,10 @@ footer {
   from {
     background-position: 6em 0em;
   }
-  10% {
-    background-position: $r*math.cos(1*$pd) $r*math.sin(1*$pd);
-  }
-  20% {
-    background-position: $r*math.cos(2*$pd) $r*math.sin(2*$pd);
-  }
-  30% {
-    background-position: $r*math.cos(3*$pd) $r*math.sin(3*$pd);
-  }
-  40% {
-    background-position: $r*math.cos(4*$pd) $r*math.sin(4*$pd);
-  }
-  50% {
-    background-position: $r*math.cos(5*$pd) $r*math.sin(5*$pd);
-  }
-  60% {
-    background-position: $r*math.cos(6*$pd) $r*math.sin(6*$pd);
-  }
-  70% {
-    background-position: $r*math.cos(7*$pd) $r*math.sin(7*$pd);
-  }
-  80% {
-    background-position: $r*math.cos(8*$pd) $r*math.sin(8*$pd);
-  }
-  90% {
-    background-position: $r*math.cos(9*$pd) $r*math.sin(9*$pd);
+  @for $i from 1 through 9 {
+    #{$i*10}% {
+      background-position: $r*math.cos($i*$pd) $r*math.sin($i*$pd);
+    }
   }
   to {
     background-position: 6em 0em;
