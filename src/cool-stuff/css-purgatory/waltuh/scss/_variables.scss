@@ -4,8 +4,8 @@
 $-color-white: hsl(280 30% 80%);
 $-color-dark:  color.adjust($-color-white, $lightness: -50%);
 $-color-light: hsl(190 80% 30%);
-$-ff-serif: ["Inconsolata", monospace];
-$-ff-sans: ["Jost", sans-serif];
+$-ff-serif: "Inconsolata", monospace;
+$-ff-sans: "Jost", sans-serif;
 $-fs-900: math.div(100rem, 16);
 
 @forward "base" with (
@@ -31,4 +31,3 @@ $-fs-900: math.div(100rem, 16);
 
   font-display: swap;
 }
-
