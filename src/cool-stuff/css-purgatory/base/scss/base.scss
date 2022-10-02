@@ -1,3 +1,4 @@
+@mixin reset {
 /* ----------------- */
 /* Custom Properties */
 /* ----------------- */
@@ -28,63 +29,6 @@ $fs-200: calc(16rem / 16);
 $ff-serif: serif;
 $ff-sans-cond: sans-serif;
 $ff-sans: sans-serif;
-
-/* ----- */
-/* Reset */
-/* ----- */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body, h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  font-weight: 400;
-}
-
-h1, h2, h3 {
-  line-height: 1.1;
-}
-
-body {
-  font-family: $ff-sans;
-  font-size: $fs-400;
-  color: $color-dark;
-  background-color: $color-white;
-  line-height: 1.5;
-  min-height: 100vh;
-}
-
-main {
-  margin-left: 1vw;
-  margin-top: 1vh;
-}
-
-img, picture {
-  max-width: 100%;
-  display: block;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behaviour: auto !important;
-	}
-}
-
 
 /* --------------- */
 /* Utility Classes */
@@ -188,6 +132,65 @@ section:not(:last-of-type) {
 footer {
   margin-top: 3vh;
 }
+
+/* ----- */
+/* Reset */
+/* ----- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+}
+
+body {
+  font-family: $ff-sans;
+  font-size: $fs-400;
+  color: $color-dark;
+  background-color: $color-white;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+main {
+  margin-left: 1vw;
+  margin-top: 1vh;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behaviour: auto !important;
+	}
+}
+}
+
+@include reset;
 
 /* -------------------- */
 /* Non-Reusable Classes */
