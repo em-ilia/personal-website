@@ -1,3 +1,8 @@
+//
+//
+// Do Not Change This File!
+//
+//
 @use "sass:math";
 /* ----------------- */
 /* Custom Properties */
@@ -10,27 +15,26 @@
 
   /* colors */
 
-$color-dark:  hsl(0 0% 0%); /* Black */
-$color-light: hsl(0 0% 50%); /* Gray */
-$color-white: hsl(0 0% 100%);/* White */
+$color-dark:  hsl(0 0% 0%) !default; /* Black */
+$color-light: hsl(0 0% 50%) !default; /* Gray */
+$color-white: hsl(0 0% 100%) !default;/* White */
 
   /* font */
 
   /* Sizes divided by 16 so values given in px */
-$fs-900: math.div(125rem, 16);
-$fs-800: math.div(75rem, 16);
-$fs-700: math.div(56rem, 16);
-$fs-600: math.div(32rem, 16);
-$fs-500: math.div(28rem, 16);
-$fs-400: math.div(24rem, 16);
-$fs-300: math.div(18rem, 16);
-$fs-200: math.div(16rem, 16);
+$fs-900: math.div(125rem, 16) !default;
+$fs-800: math.div(75rem, 16) !default;
+$fs-700: math.div(56rem, 16) !default;
+$fs-600: math.div(32rem, 16) !default;
+$fs-500: math.div(28rem, 16) !default;
+$fs-400: math.div(24rem, 16) !default;
+$fs-300: math.div(18rem, 16) !default;
+$fs-200: math.div(16rem, 16) !default;
 
-$ff-serif: serif;
-$ff-sans-cond: sans-serif;
-$ff-sans: sans-serif;
+$ff-serif: serif !default;
+$ff-sans-cond: sans-serif !default;
+$ff-sans: sans-serif !default;
 
-@mixin utility{
 /* --------------- */
 /* Utility Classes */
 /* --------------- */
@@ -133,9 +137,7 @@ section:not(:last-of-type) {
 footer {
   margin-top: 3vh;
 }
-}
 
-@mixin reset {
 /* ----- */
 /* Reset */
 /* ----- */
@@ -159,6 +161,7 @@ h1, h2, h3 {
 }
 
 body {
+  @debug "In base.body, #{$color-dark}";
   font-family: $ff-sans;
   font-size: $fs-400;
   color: $color-dark;
@@ -197,8 +200,6 @@ input, button, textarea, select {
     transition-duration: 0.01ms !important;
     scroll-behaviour: auto !important;
 	}
-}
-
 }
 
 /* -------------------- */
