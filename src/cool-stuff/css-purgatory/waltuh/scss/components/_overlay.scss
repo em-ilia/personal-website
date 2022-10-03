@@ -1,6 +1,6 @@
 @keyframes overlay-breathe {
   from {opacity: 0.04;}
-  to {opacity: 0.12;}
+  to {opacity: 0.10;}
 }
 #overlay {
   width: 100%;
@@ -12,7 +12,7 @@
   opacity: 0.10;
   z-index: 1;
   background-image: url('https://ilia.moe/img/noise.gif');
-  background-size: 25%;
+  background-size: 20vmin;
 
-  animation: overlay-breathe 4s ease infinite alternate;
+  animation: overlay-breathe 3s ease-in infinite alternate;
 }
