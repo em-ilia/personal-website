@@ -161,7 +161,6 @@ h1, h2, h3 {
 }
 
 body {
-  @debug "In base.body, #{$color-dark}";
   font-family: $ff-sans;
   font-size: $fs-400;
   color: $color-dark;
