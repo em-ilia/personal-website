@@ -19,7 +19,7 @@ $-fs-900: math.div(100rem, 16);
 
 @font-face {
   font-family: "Inconsolata";
-  src: url("fonts/Inconsolata.ttf");
+  src: url("/fonts/Inconsolata.ttf");
 
   font-display: swap;
   font-variation-settings: "wdth" 85;
@@ -27,7 +27,7 @@ $-fs-900: math.div(100rem, 16);
 
 @font-face {
   font-family: "Jost";
-  src: url("fonts/Jost.ttf");
+  src: url("/fonts/Jost.ttf");
 
   font-display: swap;
 }
