@@ -1,0 +1,74 @@
+@use "sass:list";
+@use "../variables" as *;
+
+%grid {
+  display: grid;
+}
+
+@mixin grid-3x3-offset($top: 1fr, $bottom: 1fr, $left: 1fr, $right: 1fr) {
+  @debug "mixin top: #{$top}";
+  @extend %grid;
+  grid-template-rows: $top 1fr $bottom;
+  grid-template-columns: $left 1fr $right;
+  grid-template-areas:
+    "nw n ne"
+    "w center e"
+    "sw s se";
+}
+
+/* Classes */
+%offset-grid {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+
+  div {
+    justify-self: center;
+    grid-area: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    h1, h2, h3 {
+      display: inline-block;
+      width: min-content;
+    }
+  }
+}
+
+// Grid Offset Hell
+$offset-amt: 0.33fr;
+@each $dir in [top, bottom, left, right] {
+  $dir_adj: "";
+  @if $dir {
+    $dir_adj: "--#{$dir}";
+  }
+
+  @each $size, $size_val in (null: 1fr, wide: 0.8fr, narrow: 1.2fr)  {
+    $size_adj: "";
+    @if $size {
+      $size_adj: "--#{$size}";
+    }
+    .offset-grid#{$dir_adj}#{$size_adj} {
+      $-l: [1fr, 1fr, 1fr, 1fr];
+      @if $dir == top {
+        $-l: [$offset-amt, 1fr, $size_val, $size_val];
+      } @else if $dir == bottom {
+        $-l: [1fr, $offset-amt, $size_val, $size_val];
+      } @else if $dir == left {
+        $-l: [$size_val, $size_val, $offset-amt, 1fr];
+      } @else if $dir == right {
+        $-l: [$size_val, $size_val, 1fr, $offset-amt];
+      }
+      @debug "list: #{$-l}";
+      @debug list.nth($-l, 1);
+      @include grid-3x3-offset($top: list.nth($-l,1), $bottom: list.nth($-l,2),
+                               $left: list.nth($-l,3), $right: list.nth($-l,4));
+
+      @extend %offset-grid;
+    }
+  }
+}
