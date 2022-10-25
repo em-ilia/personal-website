@@ -1,13 +1,16 @@
-@import "ilia1";
+@use "waltuh/waltuh";
+@use "waltuh/variables" as *;
+
+#pgp_a {
+	position: fixed;
+	display: none;
+
+	font-size: $fs-200;
+	margin-top: 0.4rem;
+}
 
 footer {
-    a {
-      display: table-cell;
-      height: 6vh;
-      width: 15%;
-      margin: 3%;
-
-      font-size: 6vh;
-      text-align: center;
-    }
+	width: 100%;
+	font-size: $fs-800;
+	justify-content: center !important;
 }
