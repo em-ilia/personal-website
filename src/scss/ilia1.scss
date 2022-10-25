@@ -208,6 +208,10 @@ footer {
   background-size: 25%;
 }
 
+#pgp_a {
+  display: none;
+}
+
 /* Animations */
 // GRADIENTS (you might need them!)
 $rainbow-gradient: repeating-linear-gradient(to left, red, violet, indigo, blue, green, yellow, orange, red, violet);
