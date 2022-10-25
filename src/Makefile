@@ -1,5 +1,5 @@
 clean:
-	rm css/*
+	rm -rf css/*
 
 css:
 	sass scss:css
