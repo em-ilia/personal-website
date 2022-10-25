@@ -47,7 +47,7 @@ $offset-amt: 0.33fr;
     $dir_adj: "--#{$dir}";
   }
 
-  @each $size, $size_val in (null: 1fr, wide: 0.4fr, narrow: 1.2fr)  {
+  @each $size, $size_val in (null: 1fr, wide: 0.6fr, narrow: 1.2fr)  {
     $size_adj: "";
     @if $size {
       $size_adj: "--#{$size}";
