@@ -1,0 +1,20 @@
+.fullsize {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+$gap-sizes: ("small": 1vmin, "mid": 3vmin, "large": 5vmin);
+
+@each $size, $dist in $gap-sizes {
+  @each $dir in [top, bottom, left, right] {
+    .gap-#{$size}-#{$dir} {
+      margin-#{$dir}: $dist;
+    }
+  }
+}
