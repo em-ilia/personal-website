@@ -37,3 +37,20 @@ span.waltuh-gradient {
   wipeIn 0.25s ease-in;
 
 }
+
+span.waltuh-gradient-underline {
+  position: relative;
+
+  &::after {
+    @extend span, .waltuh-gradient;
+    background-clip: unset;
+    border-radius: 2rem;
+
+    content: "";
+    position: absolute;
+    bottom: 0.2rem;
+    left: 10%;
+    height: 0.4rem;
+    width: 80%;
+  }
+}
