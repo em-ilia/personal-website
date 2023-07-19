@@ -14,6 +14,12 @@ tags: []
 - 2 tsp Worcestershire sauce
 - 8 oz (half box) dried macaroni
 
+### Notes
+
+- 1 cup of cheese means half of a block. Do not use an entire block or you will suffer.
+- Sharper cheeses help the sauce to have flavor. Mild cheddar yields sub par flavor.
+- Toast bread crumbs before baking them! They do not have the right texture otherwise.
+
 ### Procedure
 1. Begin boiling water for pasta, begin cooking when boiling
 2. Melt butter in a medium saucepan over medium-low heat
