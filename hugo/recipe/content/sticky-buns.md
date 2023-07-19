@@ -1,5 +1,5 @@
 ---
-title: "Stickybuns"
+title: "Sticky Buns"
 lastmod: ":git"
 date: 2022-06-29T14:46:50-04:00
 author: "Joshua Weissman"
