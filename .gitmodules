@@ -1,3 +1,6 @@
 [submodule "hugo/recipe/themes/ilia-hugo-theme"]
 	path = hugo/recipe/themes/ilia-hugo-theme
 	url = git@github.com:em-ilia/ilia-hugo-theme.git
+[submodule "hugo/recipe/themes/waltuh-hugo-theme"]
+	path = hugo/recipe/themes/waltuh-hugo-theme
+	url = https://git.ilia.moe/emilia/waltuh-hugo-theme
