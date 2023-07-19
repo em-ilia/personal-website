@@ -6,11 +6,11 @@
 	display: none;
 
 	font-size: $fs-200;
-	margin-top: 0.4rem;
+	margin-top: 0.6rem;
 }
 
 footer {
 	width: 100%;
-	font-size: $fs-800;
+	font-size: clamp(2rem, $fs-800, 15vw);
 	justify-content: center !important;
 }
