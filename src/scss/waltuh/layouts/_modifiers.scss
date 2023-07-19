@@ -18,3 +18,7 @@ $gap-sizes: ("small": 1vmin, "mid": 3vmin, "large": 5vmin);
     }
   }
 }
+
+.no-overflow {
+  overflow: hidden;
+}
