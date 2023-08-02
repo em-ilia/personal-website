@@ -54,3 +54,17 @@ span.waltuh-gradient-underline {
     width: 80%;
   }
 }
+
+span.spoiler {
+  background: black;
+  color: transparent;
+  user-select: none;
+
+  transition: background 100ms ease,
+              color 100ms ease;
+
+  &:hover, &:active, &:focus {
+    background: inherit;
+    color: inherit;
+  }
+}
