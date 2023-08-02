@@ -71,6 +71,13 @@ $offset-amt: 0.33fr;
                                $left: list.nth($-l,3), $right: list.nth($-l,4));
 
       @extend %offset-grid;
+
+      &--column {
+        @extend .offset-grid#{$dir_adj}#{$size_adj};
+        div {
+          grid-area: n / s;
+        }
+      }
     }
   }
 }
