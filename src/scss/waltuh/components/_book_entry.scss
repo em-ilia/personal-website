@@ -1,0 +1,44 @@
+.book-entry-container {
+  width: 100%;
+}
+
+.book-entry {
+  width: 100%;
+  position: relative;
+  &:last-of-type {
+    margin-bottom: 5vh;
+  }
+  details {
+    summary {
+      cursor: pointer;
+      user-select: none;
+    }
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 4rem 1fr;
+      grid-template-areas:
+        "author year score"
+        "comments comments comments"
+    }
+  }
+}
+
+.book-entry__author {
+  grid-area: author;
+}
+.book-entry__year {
+  grid-area: year;
+}
+.book-entry__score {
+  grid-area: score;
+  &:before {
+    content: "Score: ";
+  }
+  &:after {
+    content: " / 10";
+  }
+}
+.book-entry__comments {
+  grid-area: comments;
+}
