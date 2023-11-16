@@ -16,8 +16,8 @@
   /* colors */
 
 $color-dark:  hsl(0 0% 0%) !default; /* Black */
-$color-light: hsl(0 0% 50%) !default; /* Gray */
-$color-white: hsl(0 0% 100%) !default;/* White */
+$color-fg: hsl(0 0% 50%) !default; /* Gray */
+$color-bg: hsl(0 0% 100%) !default;/* White */
 
   /* font */
 
@@ -82,6 +82,22 @@ $ff-sans: sans-serif !default;
   bottom: 0%;
 }
 
+.lock-right {
+  position: fixed;
+  right: 0%;
+}
+
+.lock-top {
+  position: fixed;
+  top: 0%;
+}
+
+.sideways-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: -1.0rem;
+}
+
 /* Other */
 
 .hr::after { /* Add fake hr after header */
@@ -99,12 +115,12 @@ $ff-sans: sans-serif !default;
 /* Color Classes */
 
 .bg-dark  { background-color: $color-dark; }
-.bg-light { background-color: $color-light; }
-.bg-white { background-color: $color-white; }
+.bg-light { background-color: $color-fg; }
+.bg-white { background-color: $color-bg; }
 
 .text-dark  { color: $color-dark; }
-.text-light { color: $color-light; }
-.text-white { color: $color-white; }
+.text-light { color: $color-fg; }
+.text-white { color: $color-bg; }
 
 /* Font Classes */
 
@@ -135,7 +151,8 @@ section:not(:last-of-type) {
 }
 
 footer {
-  margin-top: 3vh;
+  height: 100%;
+  margin-right: 3vw;
 }
 
 /* ----- */
@@ -164,7 +181,7 @@ body {
   font-family: $ff-sans;
   font-size: $fs-400;
   color: $color-dark;
-  background-color: $color-white;
+  background-color: $color-bg;
   line-height: 1.5;
   min-height: 100vh;
 }

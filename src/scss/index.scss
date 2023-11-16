@@ -1,5 +1,5 @@
-@use "waltuh/waltuh";
-@use "waltuh/variables" as *;
+@use "new-style/new-style";
+@use "new-style/variables" as *;
 
 #pgp_a {
 	position: fixed;
@@ -9,8 +9,22 @@
 	margin-top: 0.6rem;
 }
 
+.main_grid {
+	height: 16em;
+	display: inline-grid;
+	grid-template-columns: [title] 1fr [subtext-col] 6fr;
+	grid-template-rows: [blank1] 1fr [subtext-row] 1fr [blank2] 1fr;
+	grid-template-areas: "t ." "t d" "t .";
+
+	&>h1 {
+		grid-area: t;
+	}
+	&>div {
+		grid-area: d;
+	}
+}
+
 footer {
-	width: 100%;
 	font-size: clamp(2rem, $fs-800, 15vw);
 	justify-content: center !important;
 }

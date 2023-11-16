@@ -1,17 +1,17 @@
 @use "sass:color";
 @use "sass:math";
 
-$-color-white: hsl(280 30% 80%);
-$-color-dark:  color.adjust($-color-white, $lightness: -50%);
-$-color-light: hsl(190 80% 30%);
+$-color-bg: hsl(180 1% 10%);
+$-color-dark:  color.adjust($-color-bg, $lightness: +80%);
+$-color-fg: hsl(344 65% 20%);
 $-ff-serif: "Inconsolata", monospace;
 $-ff-sans: "Jost", sans-serif;
 $-fs-900: math.div(100rem, 16);
 
 @forward "base" with (
-  $color-white: $-color-white,
+  $color-bg: $-color-bg,
   $color-dark: $-color-dark,
-  $color-light: $-color-light,
+  $color-fg: $-color-fg,
   $ff-serif: $-ff-serif,
   $ff-sans: $-ff-sans,
   $fs-900: $-fs-900

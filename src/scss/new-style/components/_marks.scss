@@ -1,0 +1,84 @@
+@use "sass:math";
+@use "sass:color";
+@use "../variables" as *;
+
+
+@keyframes wipeIn {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+span.new-style-gradient {
+  font-weight: 600;
+
+  color: transparent;
+  $grad1: color.adjust($color-fg, $saturation: +80%, $lightness: +10%);
+  $grad2: color.adjust($grad1, $lightness: -10%);
+  background: linear-gradient($grad1, $grad2);
+  background-size: 30vmin 30vmin;
+  background-clip: text;
+
+  animation: wipeIn 0.25s ease-in;
+
+}
+
+span.new-style-gradient-underline {
+  position: relative;
+
+  &::after {
+    @extend span, .new-style-gradient;
+    background-clip: unset;
+    border-radius: 2rem;
+
+    content: "";
+    position: absolute;
+    bottom: -0.1rem;
+    left: 5%;
+    height: 0.6rem;
+    width: 90%;
+  }
+}
+
+%new-style-gradient-sideline {
+  position: relative;
+
+  &::after {
+    @extend span, .new-style-gradient;
+    background-clip: unset;
+    border-radius: 2rem;
+
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    height: 95%;
+    width: 0.6rem;
+  }
+}
+
+span.new-style-gradient-sideline--right {
+  @extend %new-style-gradient-sideline;
+  &::after {
+    right: 0.6rem;
+  }
+}
+
+span.new-style-gradient-sideline--left {
+  @extend %new-style-gradient-sideline;
+  &::after {
+    left: 0.6rem;
+  }
+}
+
+span.spoiler {
+  background: black;
+  color: transparent;
+  user-select: none;
+
+  transition: background 100ms ease,
+              color 100ms ease;
+
+  &:hover, &:active, &:focus {
+    background: inherit;
+    color: inherit;
+  }
+}
