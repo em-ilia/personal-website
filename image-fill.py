@@ -49,7 +49,7 @@ with FileInput(html_path, inplace=True) as html:
     for line in html:
         if "Images go below" in line:  # Insert imgs here
             print(line, end='')
-            for img in imgs:
+            for img in sorted(imgs):
                 print(img)
         else:
             print(line, end='')
