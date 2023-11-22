@@ -1,0 +1,50 @@
+@import "waltuh/waltuh";
+
+main {
+	grid-template-rows: 0.1fr 1fr 1fr !important; // Override default
+	grid-template-columns: 15vw 1fr 15vw !important; // Mobile compat is less of a concern for this page
+
+	div:first-child {
+		div:first-child {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+h1 {
+	margin-top: 3vh;
+}
+
+.gallery {
+	width: 100%;
+	margin-top: 3vh;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	flex-wrap: wrap;
+
+	img {
+		width: clamp(12rem, calc(20vw + 1vmin), calc(20vw + 1vmin)); // Add 1vmin to account for padding
+		aspect-ratio: auto;
+
+		margin: 1vmin 1vmin;
+		padding: 1vmin 1vmin;
+
+		background: white;
+
+		+ .black-bg {
+			background: black !important;
+		}
+		+ .no-bg {
+			background: transparent !important;
+		}
+	}
+
+	
+}

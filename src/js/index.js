@@ -12,6 +12,9 @@ if (is_mobile === '1') {
 	}
 
 const moon = document.getElementById('moonlink');
-console.log(moon);
 moon.onmouseover = function() {moon.innerHTML = "&#127771"}
 moon.onmouseout = function() {moon.innerHTML = "&#127772"}
+
+const camera = document.getElementById('camera');
+camera.onmouseover = function() {camera.innerHTML = "&#128248"}
+camera.onmouseout = function() {camera.innerHTML = "&#128247"}
