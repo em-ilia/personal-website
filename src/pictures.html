@@ -29,6 +29,17 @@
 	<footer class="lock-bottom">
 		<p><a href="../">Return</a></p>
 	</footer>
+	<script>
+		// Convenience to open images when clicked :)
+		// Also deletes images if they don't load
+		// Everything still works without JS ofc
+		const imgs = document.getElementsByTagName('img');
+		for (let img of imgs) {
+			img.onclick = () => window.open(img.src);
+			img.onerror = () => {img.remove();
+				console.error(`Failed to load ${img.src}`);}
+		}
+	</script>
 </body>
 
 </html>
