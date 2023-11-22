@@ -42,7 +42,7 @@ images = list(image_dir.rglob("*.png")) + \
 # Generate the img tag for each file
 imgs = []
 for i in images:
-    src = str(i)
+    src = str(i.relative_to(i.parents[1]))
     imgs.append(f'<img src="{src}" />')
 
 with FileInput(html_path, inplace=True) as html:
