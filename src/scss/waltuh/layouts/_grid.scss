@@ -78,7 +78,6 @@ $offset-amt: 0.33fr;
         @extend .offset-grid#{$dir_adj}#{$size_adj};
         div {
           grid-area: n / s;
-          max-width: 800px;
         }
       }
     }
