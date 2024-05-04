@@ -42,6 +42,8 @@
 }
 
 // Grid Offset Hell
+// no actually what the heck is happening here omg
+// this is so cursed why did i do this
 $offset-amt: 0.33fr;
 @each $dir in [top, bottom, left, right] {
   $dir_adj: "";
